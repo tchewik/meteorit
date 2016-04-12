@@ -1,0 +1,4 @@
+local variable ghmcr="https://github.com/tchewik/microscope.git"
+to push enter:
+	git push $ghmcr master	// to push at github.com
+	git push heroku master	// to push at herokuapp.com
