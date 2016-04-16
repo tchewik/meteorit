@@ -1,0 +1,15 @@
+<template name="layout">
+  <div class="container">
+    <header class="navbar navbar-default" role="navigation">
+      <dev class="navbar header">
+        <a class="navbar-brand" href="{{pathFor 'postsList'}}">Microscope</a>
+      </dev>
+    </header>
+    <div id="main" class="row-fluid">
+      {{> yield}}
+    </div>
+  </div>
+  <div class="footer" align="center">
+    <a href="https://vk.com/tchewik" target="_blank">Елена Чистова</a>, 2016 
+  </div>
+</template>
