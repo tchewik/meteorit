@@ -1,10 +1,6 @@
 <template name="layout">
+  {{>header}}
   <div class="container">
-    <header class="navbar navbar-default" role="navigation">
-      <dev class="navbar header">
-        <a class="navbar-brand" href="{{pathFor 'postsList'}}">Microscope</a>
-      </dev>
-    </header>
     <div id="main" class="row-fluid">
       {{> yield}}
     </div>
