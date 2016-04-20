@@ -5,5 +5,5 @@ Meteor.publish('posts', function(author){
 */
 
 Meteor.publish('posts', function(){
-	return Posts.find();
+	return Posts.find({}, {sort:{rating:-1}});
 });
