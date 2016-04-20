@@ -1,12 +1,19 @@
 <template name="postItem">
 	<div class="post">
 		<div id="{{_id}}" class="post-content">
-			<h3><a class="fa" href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+			<h3>
+				<a class="fa" href="{{url}}">{{title}}</a><span>{{domain}}</span>
+			</h3>
+			{{>starsRating id=_id class="js-rate" size=20 mutable=true}}
+			{{#if rating}}
+				<h4>Rating: {{rating}}</h4>
+			{{/if}}
 		</div>
 		{{#if currentUser}}
-			{{>starsRating size=12 mutable=true}}
-			<a href='' id="js-del-btn" class="discuss btn btn-warning">Delete</a>	
-			<a href="{{pathFor 'postPage'}}" class="discuss btn btn-info">Discuss</a>
+			<div>
+				<a href='' id="js-del-btn" class="discuss btn btn-warning">Delete</a>	
+				<a href="{{pathFor 'postPage'}}" class="discuss btn btn-info">Discuss</a>
+			</div>
 		{{/if}}
 	</div>
 </template>
