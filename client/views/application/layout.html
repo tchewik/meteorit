@@ -1,0 +1,11 @@
+<template name="layout">
+  {{>header}}
+  <div class="container">
+    <div id="main" class="row-fluid">
+      {{> yield}}
+    </div>
+  </div>
+  <div class="footer" align="center">
+    <a href="https://vk.com/tchewik" target="_blank">{{i18n "Elena Chistova"}}</a>, 2016 
+  </div>
+</template>
