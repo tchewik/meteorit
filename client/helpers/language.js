@@ -32,21 +32,22 @@ function prepareUserLanguage() {
 	// если нет ни в бд, ни в куках, то определим его через freegeoip.net
 	console.log("чужой код с ajax из language.js пошел в ход");
 	$.ajax({
-		url: '//freegeoip.net/json/',
-		type: 'POST',
-		dataType: 'jsonp',
-		success: function (location) {
-			if (location) {
-				var lang;
-				if (location.country_code == "RU" || location.country_code == "UA" || location.country_code == "KZ" || location.country_code == "BY")
-					lang = "ru";
-				else
-					lang = "en";
-
-				setLang(lang);
-			}
-		}
-	});
+        url: '//ipinfo.io',
+        type: 'POST',
+        dataType: 'jsonp',
+        success: function (location) {
+            if (location) {
+            	console.log(location);
+                var lang;
+                if (location.country_code == "RU" || location.country_code == "UA" || location.country_code == "KZ" || location.country_code == "BY")
+                    lang = "ru";
+                else
+                    lang = "en";
+ 
+                setLang(lang);
+            }
+        }
+    });
 };
 
 Meteor.startup(function(){
