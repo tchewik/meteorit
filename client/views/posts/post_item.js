@@ -10,7 +10,7 @@ Template.postItem.events({
 	'click #js-del-btn':function(event){
 		var postId = this._id;
 		$("#"+postId).hide('slow', function(){
-			Meteor.call('postRemove', postId);
+			Meteor.call('postRemove', postId);	// эти методы в /lib/posts.js
 		})		
 	},
 	'click .js-rate':function(event){
