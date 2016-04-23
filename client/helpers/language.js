@@ -1,6 +1,6 @@
 Meteor.startup(function() {
 	// обращается к местоположению устройства и в зависимости от него выставляет язык
-	$.getJSON('http://ipinfo.io', function(userData){
+	$.getJSON('//ipinfo.io', function(userData){
 	  console.log(userData);
 	  country = userData.country;
 	  if (country == 'RU'
