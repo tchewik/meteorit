@@ -9,6 +9,7 @@
       </button>
       <a class="navbar-brand" href="{{pathFor 'postsList'}}">TCHEBLOG</a>
     </div>
+
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if currentUser}}<li><a href="{{pathFor 'postSubmit'}}">{{i18n "Submit Post"}}</a></li>{{/if}}
