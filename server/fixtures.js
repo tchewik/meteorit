@@ -13,4 +13,9 @@ if (Posts.find().count() === 0) {
     title: 'The Meteor Book',
     url: 'http://themeteorbook.com'
   });
+
+    Posts.insert({
+    title: 'Tchwitter',
+    url: 'http://twitter.com/tchewik'
+  });
 }

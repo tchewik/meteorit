@@ -15,8 +15,8 @@ Template.postItem.events({
 	},
 	'click .js-rate':function(event){
 		var rating = $(event.currentTarget).data("userrating");
-		console.log("post_item.js says: " + rating);
 		var postId = this.id;
+		console.log(Posts.find({"_id":this.id}).fetch());
 		Meteor.call('postRating', postId, rating);
 	}
 });
