@@ -1,6 +1,6 @@
 <template name="layout">
   {{>header}}
-  {{>langWarningTemplate}}
+  {{#if currentUser}} {{>langWarningTemplate}} {{/if}}
   <div class="container">
     <div id="main" class="row-fluid">
       {{> yield}}
