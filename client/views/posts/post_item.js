@@ -16,9 +16,13 @@ Template.postItem.events({
 	'click .js-rate':function(event){
 		console.log("post_item вещает");
 		var rating = $(event.currentTarget).data("userrating");
-		var postId = this.id;
-		console.log(Posts.find({"_id":this.id}).fetch());
-		Meteor.call('postRating', postId, rating);
-		console.log(Posts.find({"_id":this.id}).fetch());
+		if (rating){		
+			var postId = this.id;
+			console.log(Posts.find({"_id":this.id}).fetch());
+			Meteor.call('postRating', postId, rating);
+			console.log(Posts.find({"_id":this.id}).fetch());
+			return;
+		}
+		alert("Зайдите на сайт, чтобы голосовать");
 	}
 });
