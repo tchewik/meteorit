@@ -1,9 +1,4 @@
-/*
-Meteor.publish('posts', function(author){
-	return Posts.find({author: author}); // Корень зла!
-});
-*/
-
+// posts --> post_List.js
 Meteor.publish('posts', function(){
-	return Posts.find({}, {sort:{rating:-1}});
+	return Posts.find();
 });

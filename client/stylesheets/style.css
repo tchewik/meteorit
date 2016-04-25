@@ -159,3 +159,26 @@ body {
   margin-bottom: 5px;
   pointer-events: auto;
 }
+
+/*------------------------------------------------------------------*/
+.lang-warning {
+  font-size: 12px;
+  line-height:20px; 
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FFCA73;
+}
+.lang-warning .switch_lang {
+  font-weight: bold; 
+}
+.lang-warning .switch_lang:hover {
+  color: #497B70; /*мятный-темный*/
+  cursor: pointer;
+}
+.my-star .current-rating {
+  color: #FFCA73; /*оранжевый (основа)*/
+}
+.my-star .active {
+  color: #92D2C4; /*мятный-светлый*/
+}
