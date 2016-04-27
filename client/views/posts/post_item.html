@@ -1,8 +1,12 @@
 <template name="postItem">
 	<div class="post">
 		<div id="{{_id}}" class="post-content">
+			<p>
+				{{#if containsAuthor}}<div class="post-author-name">{{author}}</div>{{/if}} 
+				{{#if containsTime}}<div class="post-submitted-time">{{submitted}}</div>{{/if}}
+			</p>
 			<h3>
-				<a class="fa" href="{{url}}">{{title}}</a><span>{{domain}}</span>
+				<a href="{{url}}">{{title}}</a>
 			</h3>
 			{{>starsRating id=_id class="js-rate my-star" size=20 mutable=currentUser}}
 		</div>

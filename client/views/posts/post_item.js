@@ -3,6 +3,24 @@ Template.postItem.helpers({
 		var a = document.createElement('a');
 		a.href = this.url;
 		return a.hostname;
+	},
+	containsAuthor: function(){
+		if (this.author)
+			return true;
+		return false;
+	},
+	author: function(){
+		if (this.author)
+			return this.author;
+	},
+	containsTime: function(){
+		console.log(this);
+		if (this.submitted)
+			return true;
+		return false;
+	},
+	submitted: function(){
+		return this.submitted.toLocaleString();
 	}
 });
 
