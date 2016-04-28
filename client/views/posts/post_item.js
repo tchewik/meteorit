@@ -21,10 +21,26 @@ Template.postItem.helpers({
 	},
 	submitted: function(){
 		return this.submitted.toLocaleString();
+	},
+	rValue: function(){
+		return Math.round(this.rating.rValue * 100)/100;
+	},
+
+	/* Оставлю здесь
+	lightMyPosts: function(){
+		if (this.author === Meteor.user().username){
+			var postId = this._id;
+			//$(".post").html("KKKKKKK");
+			var wtf = $(".post").html();
+			console.log("wtf ::: " + wtf);
+			console.log("Ну как, перекрасил?");
+		}
 	}
+	*/
 });
 
 Template.postItem.events({
+
 	'click #js-del-btn':function(event){
 		var postId = this._id;
 		$("#"+postId).hide('slow', function(){
@@ -41,3 +57,18 @@ Template.postItem.events({
 		alert("Зайдите на сайт, чтобы голосовать");
 	}
 });
+
+/*
+потуги перекрасить посты пользователя, зашедшего на страницу
+Template.postItem.rendered = function() {
+	console.log(this.author() + " ::: " + Meteor.user().username);
+	if (this.author === Meteor.user().username){
+			var postId = this._id;
+			$("#"+postId).html("KKKKKKK");
+			var wtf = $("#"+postId).html();
+			console.log("wtf ::: " + wtf);
+			console.log("Ну как, перекрасил?");
+		}
+	console.log('Template onLoad');
+}
+*/

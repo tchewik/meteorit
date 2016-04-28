@@ -1,5 +1,8 @@
 Template.postsList.helpers({
 	posts: function(){
-		return Posts.find({}, {sort: {submitted: -1}});	//курсор, в случае обновления Posts (-> posts.js) обновит main.html
+		return Posts.find({}, {sort: 
+								{'rating.rValue': -1,	// по убыванию рейтинга
+								 'submitted': 1	// по убыванию даты публикации
+								}});	
 	}
 });

@@ -1,6 +1,7 @@
 <template name="postItem">
 	<div class="post">
 		<div id="{{_id}}" class="post-content">
+		
 			<p>
 				{{#if containsAuthor}}<div class="post-author-name">{{author}}</div>{{/if}} 
 				{{#if containsTime}}<div class="post-submitted-time">{{submitted}}</div>{{/if}}
@@ -8,11 +9,11 @@
 			<h3>
 				<a href="{{url}}">{{title}}</a>
 			</h3>
-			{{>starsRating id=_id class="js-rate my-star" size=20 mutable=currentUser}}
+			{{>starsRating id=_id class="js-rate my-star" size=20 mutable=currentUser}}{{rValue}}
 		</div>
 		{{#if currentUser}}
-			<div>
-				<a href='' id="js-del-btn" class="discuss btn btn-warning">{{i18n "Delete"}}</a>	
+			<div> 
+				<a href='' id="js-del-btn" class="discuss btn btn-warning">{{i18n "Delete"}}</a>
 				<a href="{{pathFor 'postPage'}}" class="discuss btn btn-info">{{i18n "Discuss"}}</a>
 			</div>
 		{{/if}}
