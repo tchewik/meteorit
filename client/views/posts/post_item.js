@@ -22,6 +22,9 @@ Template.postItem.helpers({
 	submitted: function(){
 		return this.submitted.toLocaleString();
 	},
+	ownPost: function(){
+		return this.author == Meteor.user().username;
+	},
 	rValue: function(){
 		return Math.round(this.rating.rValue * 100)/100;
 	}
