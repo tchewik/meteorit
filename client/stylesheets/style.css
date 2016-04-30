@@ -197,3 +197,20 @@ body {
   color: #bbb;
   text-transform: uppercase; 
 }
+.btn-primary{
+  color: #fff;
+  background-color: #497B70;
+  border-color: #186B58;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff;
+  background-color: #497B70;
+  border-color: #186B58;
+  box-shadow: 0 0 5px #5C5585;
+  border: 1px solid #5C5585;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px #5C5585;
+}

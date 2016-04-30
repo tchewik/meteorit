@@ -1,9 +1,4 @@
 Template.postItem.helpers({
-	domain: function(){
-		var a = document.createElement('a');
-		a.href = this.url;
-		return a.hostname;
-	},
 	containsAuthor: function(){
 		if (this.author)
 			return true;
@@ -49,19 +44,7 @@ Template.postItem.events({
 
 Template.postItem.onRendered(function () {
 	if (this.data.author != Meteor.user().username){
-		console.log("hey ::: "+this.data.author+" != "+Meteor.user().username);
 		var post = "#" + this.data._id;
 		$('#js-del-btn').toggleClass('disabled');
 	}
 })
-/*
-потуги перекрасить посты пользователя, зашедшего на страницу
-Template.postItem.onRendered(function () {
-	console.log(this);
-	if (this.data.author != Meteor.user().username){
-		console.log("hey ::: "+this.data.author+" != "+Meteor.user().username);
-		var post = "#" + this.data._id;
-		$('#js-del-btn').toggleClass('disabled');
-	}
-})
-*/

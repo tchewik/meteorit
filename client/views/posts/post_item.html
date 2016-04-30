@@ -5,7 +5,7 @@
 				{{#if containsAuthor}}<div class="post-author-name">{{author}}</div>{{/if}} 
 				{{#if containsTime}}<div class="post-submitted-time">{{submitted}}</div>{{/if}}
 			</p>
-			<h3><a href="{{url}}">{{title}}</a></h3>
+			<h3>{{title}}</h3>
 			{{>starsRating id=_id class="js-rate my-star" size=20 mutable=currentUser}}{{rValue}}
 		</div>
 		{{#if currentUser}}
