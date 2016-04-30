@@ -1,7 +1,6 @@
 <template name="postItem">
-	<div class="post">
-		<div id="{{_id}}" class="post-content">
-		
+	<div id="{{_id}}" class="post">
+		<div  class="container-fluid post-content ">
 			<p>
 				{{#if containsAuthor}}<div class="post-author-name">{{author}}</div>{{/if}} 
 				{{#if containsTime}}<div class="post-submitted-time">{{submitted}}</div>{{/if}}
@@ -13,9 +12,10 @@
 		</div>
 		{{#if currentUser}}
 			<div> 
-				<a href='' id="js-del-btn" class="discuss btn btn-warning">{{i18n "Delete"}}</a>
-				<a href="{{pathFor 'postPage'}}" class="discuss btn btn-info">{{i18n "Discuss"}}</a>
+				<a href='' id="js-del-btn" class="discuss pull-right btn btn-warning">{{i18n "Delete"}}</a>
+				<a href="{{pathFor 'postPage'}}" class="discuss pull-right btn btn-info">{{i18n "Discuss"}}</a>
 			</div>
 		{{/if}}
+		
 	</div>
 </template>
