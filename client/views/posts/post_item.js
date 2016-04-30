@@ -24,23 +24,10 @@ Template.postItem.helpers({
 	},
 	rValue: function(){
 		return Math.round(this.rating.rValue * 100)/100;
-	},
-
-	/* Оставлю здесь
-	lightMyPosts: function(){
-		if (this.author === Meteor.user().username){
-			var postId = this._id;
-			//$(".post").html("KKKKKKK");
-			var wtf = $(".post").html();
-			console.log("wtf ::: " + wtf);
-			console.log("Ну как, перекрасил?");
-		}
 	}
-	*/
 });
 
 Template.postItem.events({
-
 	'click #js-del-btn':function(event){
 		var postId = this._id;
 		$("#"+postId).hide('slow', function(){
@@ -58,17 +45,22 @@ Template.postItem.events({
 	}
 });
 
+Template.postItem.onRendered(function () {
+	console.log(this);
+	if (this.data.author != Meteor.user().username){
+		console.log("hey ::: "+this.data.author+" != "+Meteor.user().username);
+		var post = "#" + this.data._id;
+		$('#js-del-btn').toggleClass('disabled');
+	}
+})
 /*
 потуги перекрасить посты пользователя, зашедшего на страницу
-Template.postItem.rendered = function() {
-	console.log(this.author() + " ::: " + Meteor.user().username);
-	if (this.author === Meteor.user().username){
-			var postId = this._id;
-			$("#"+postId).html("KKKKKKK");
-			var wtf = $("#"+postId).html();
-			console.log("wtf ::: " + wtf);
-			console.log("Ну как, перекрасил?");
-		}
-	console.log('Template onLoad');
-}
+Template.postItem.onRendered(function () {
+	console.log(this);
+	if (this.data.author != Meteor.user().username){
+		console.log("hey ::: "+this.data.author+" != "+Meteor.user().username);
+		var post = "#" + this.data._id;
+		$('#js-del-btn').toggleClass('disabled');
+	}
+})
 */
