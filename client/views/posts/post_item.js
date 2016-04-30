@@ -14,7 +14,6 @@ Template.postItem.helpers({
 			return this.author;
 	},
 	containsTime: function(){
-		console.log(this);
 		if (this.submitted)
 			return true;
 		return false;
@@ -49,7 +48,6 @@ Template.postItem.events({
 });
 
 Template.postItem.onRendered(function () {
-	console.log(this);
 	if (this.data.author != Meteor.user().username){
 		console.log("hey ::: "+this.data.author+" != "+Meteor.user().username);
 		var post = "#" + this.data._id;
