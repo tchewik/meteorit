@@ -6,6 +6,7 @@
 				{{#if containsTime}}<div class="post-submitted-time">{{submitted}}</div>{{/if}}
 			</p>
 			<h3>{{title}}</h3>
+			<div class="text-field">{{text}}</div>
 			{{>starsRating id=_id class="js-rate my-star" size=20 mutable=currentUser}}{{rValue}}
 		</div>
 		{{#if currentUser}}

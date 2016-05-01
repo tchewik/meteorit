@@ -28,7 +28,7 @@ Template.postItem.events({
 	'click #js-del-btn':function(event){
 		var postId = this._id;
 		$("#"+postId).hide('slow', function(){
-			Meteor.call('postRemove', postId);	// эти методы в /lib/posts.js
+			Meteor.call('postRemove', postId);
 		})		
 	},
 	'click .js-rate':function(event){
@@ -41,10 +41,3 @@ Template.postItem.events({
 		alert("Зайдите на сайт, чтобы голосовать");
 	}
 });
-
-Template.postItem.onRendered(function () {
-	if (this.data.author != Meteor.user().username){
-		var post = "#" + this.data._id;
-		$('#js-del-btn').toggleClass('disabled');
-	}
-})

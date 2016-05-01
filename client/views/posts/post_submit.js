@@ -6,7 +6,6 @@ Template.postSubmit.events({
       title: $(e.target).find('[name=title]').val(),
       text: $(e.target).find('[name=text]').val()
     };
-    
     Meteor.call('postInsert', postAttributes, function(error, result) {
       // отобразить ошибку пользователю и прерваться
       if (error)
@@ -14,8 +13,7 @@ Template.postSubmit.events({
 
       if (result.postExists)
       	alert('This link has already been posted');
-    
-      //Router.go('postPage', {_id: result._id});  
+ 
       Router.go('postsList');
     });
   }
