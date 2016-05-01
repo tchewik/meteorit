@@ -208,7 +208,7 @@ body {
 }
 
 .rating-field {
-  display: inline-block;
+  display: block;
 }
 .rating-field .warning {
   display: inline-block;
