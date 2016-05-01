@@ -199,6 +199,15 @@ body {
 .my-star .active {
   color: #92D2C4; /*мятный-светлый*/
 }
+
+.rating-field .warning {
+  padding-left: 2em;
+  color: #752330;
+}
+.rating-field .warning span {
+  display: none;
+}
+
 .post-author-name {
   font-size: 14px;
   display: inline-block;

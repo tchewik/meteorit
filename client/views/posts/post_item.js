@@ -35,6 +35,26 @@ Template.postItem.events({
 		var rating = $(event.currentTarget).data("userrating");
 		if (rating){		
 			var postId = this.id;
+			var user = Meteor.user();
+
+		    var arrayOfVoted = Posts.findOne({"_id": postId}).rating.voted;
+		    var alreadyVoted = false;
+		    arrayOfVoted.forEach(function(item, i, arr) {
+		      if (item == user._id)
+		        alreadyVoted = true;
+   			});
+   			if (alreadyVoted){
+   				$("#"+postId + " .rating-field .warning .one-user-one-vote").fadeIn(1000);
+   				$("#"+postId + " .rating-field .warning .one-user-one-vote").fadeOut(1000);
+   				return;
+   			}
+
+   			if (user.username == Posts.findOne({"_id": postId}).author){
+  				$("#"+postId + " .rating-field .warning .do-not-vote-yourself").fadeIn(1000);
+   				$("#"+postId + " .rating-field .warning .do-not-vote-yourself").fadeOut(1000);
+      			return;
+  			}
+
 			Meteor.call('postRating', postId, rating);
 			return;
 		}
