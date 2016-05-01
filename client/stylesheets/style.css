@@ -54,6 +54,7 @@ body {
     margin: 7px 12px 0 0;
     float: left; }
   .post .post-content {
+    width: 100%;
     float: left; }
     .post .post-content h3 {
       margin: 0;
@@ -162,19 +163,24 @@ body {
 
 /*------------------------------------------------------------------*/
 .post .text-field {
-  /*white-space: nowrap; /* Запрещаем перенос строк */
   padding-top: 0.7em;
   padding-bottom: 0.4em;
   display: block;
-  overflow: hidden; /* Обрезаем все, что не помещается в область */
-  width: 100%;  /*Ширина*/
-  height: 8em; 
+  overflow: hidden; 
+  width: inherit;
+  min-height: 8em; 
   text-align: justify;
-  text-overflow: ellipsis; /* Добавляем многоточие */
+  text-overflow: ellipsis; 
 }
-.buttons-field {
+.footer,
+.footer a {
+  color: #bbb;
+}
+.footer a:hover {
+  color: #5C5585;
+  text-decoration: none;
+}
 
-}
 .lang-warning {
   font-size: 12px;
   line-height:20px; 
@@ -190,6 +196,7 @@ body {
   color: #497B70; /*мятный-темный*/
   cursor: pointer;
 }
+
 .my-star {
   display: inline-block;
 }
@@ -200,12 +207,19 @@ body {
   color: #92D2C4; /*мятный-светлый*/
 }
 
+.rating-field {
+  display: inline-block;
+}
 .rating-field .warning {
+  display: inline-block;
   padding-left: 2em;
   color: #752330;
 }
 .rating-field .warning span {
   display: none;
+}
+.buttons-field {
+  display: inline;
 }
 
 .post-author-name {
@@ -265,5 +279,3 @@ input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px #5C5585;
 }
 
-.form-text {
-}

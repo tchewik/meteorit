@@ -1,26 +1,26 @@
 <template name="postItem">
 	<div id="{{_id}}" class="post">
-		<div  class="container-fluid post-content ">
+		<div  class="container-fluid post-content">
 			<p>
 				{{#if containsAuthor}}<div class="post-author-name">{{author}}</div>{{/if}} 
 				{{#if containsTime}}<div class="post-submitted-time">{{submitted}}</div>{{/if}}
 			</p>
 			<h3>{{title}}</h3>
 			<div class="text-field">{{text}}</div>
-			<div class="rating-field">
+			<div class="rating-field" align="right">
 				{{>starsRating id=_id class="js-rate my-star" size=20 mutable=currentUser}}{{rValue}}
 				<span class="warning">
 					<span class="one-user-one-vote">{{i18n "You can give only one vote"}}</span>
 					<span class="do-not-vote-yourself">{{i18n "Do not vote yourself!"}}</span>
 				</span>
 			</div>
-		</div>
+		
 		{{#if currentUser}}
-			<div class="buttons-field"> 
+			<div class="buttons-field" align="right"> 
 				{{#if ownPost}}<a href="{{pathFor 'postEdit'}}" class="discuss pull-right btn btn-warning">{{i18n "Edit"}}</a>{{/if}}
 				<a href="{{pathFor 'postPage'}}" class="discuss pull-right btn btn-primary">{{i18n "Discuss"}}</a>
 			</div>
 		{{/if}}
-		
+		</div>
 	</div>
 </template>
