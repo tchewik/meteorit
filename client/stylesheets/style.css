@@ -219,8 +219,8 @@ body {
 .btn-primary:hover,
 .btn-primary:focus {
   color: #fff;
-  background-color: #497B70;
-  border-color: #186B58;
+  background-color: #38685D;
+  border-color: #405C56;
   box-shadow: 0 0 5px #5C5585;
   border: 1px solid #5C5585;
 }
@@ -234,6 +234,20 @@ body {
   color: #fff;
   background-color: #5C5585;
   border-color: #685CB1;
+  box-shadow: 0 0 5px #5C5585;
+  border: 1px solid #5C5585;
+}
+
+.btn-danger{
+  color: #fff;
+  background-color: #875E64;
+  border-color: #76474E;
+}
+.btn-danger:hover,
+.btn-danger:focus {
+  color: #fff;
+  background-color: #752330;
+  border-color: #5F1521;
   box-shadow: 0 0 5px #5C5585;
   border: 1px solid #5C5585;
 }

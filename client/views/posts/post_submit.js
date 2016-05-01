@@ -6,6 +6,7 @@ Template.postSubmit.events({
       title: $(e.target).find('[name=title]').val(),
       text: $(e.target).find('[name=text]').val()
     };
+    
     Meteor.call('postInsert', postAttributes, function(error, result) {
       // отобразить ошибку пользователю и прерваться
       if (error)
