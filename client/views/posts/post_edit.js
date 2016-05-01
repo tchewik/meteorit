@@ -11,7 +11,6 @@ Template.postEdit.events({
 
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
       if (error) {
-        // display the error to the user
         alert(error.reason);
       } else {
         Router.go('postPage', {_id: currentPostId});
@@ -24,7 +23,6 @@ Template.postEdit.events({
 
     if (confirm("Delete this post?")) {
       var postId = this._id;
-      //Posts.remove(currentPostId);
       Meteor.call('postRemove', postId)
       Router.go('postsList');
     }

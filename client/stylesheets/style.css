@@ -241,3 +241,6 @@ body {
 input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px #5C5585;
 }
+
+.form-text {
+}
