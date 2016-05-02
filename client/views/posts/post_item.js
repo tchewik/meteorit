@@ -1,3 +1,11 @@
+Meteor.startup(function() {
+	if (Meteor.user()){
+		console.log("StartUp");
+		Session.set('loading');	// Чтобы успел загрузиться текущий юзер
+	}
+	Session.set('loading');
+});
+
 Template.postItem.helpers({
 	containsAuthor: function(){
 		if (this.author)
