@@ -16,8 +16,6 @@ Template.postSubmit.events({
       if (result.postExists){
       	$(".warning .do-not-text-it-again").fadeTo(1000, 1);
         $(".warning .do-not-text-it-again").fadeTo(1000, 0);
-        //$(".warning.do-not-text-it-again").hide('pulsate', 'slow');
-        //$(".warning .do-not-text-it-again").show("fade", 400);
         return;
       }
  

@@ -8,7 +8,7 @@
 			<h3>{{title}}</h3>
 			<div class="text-field">{{text}}</div>
 			<div class="rating-field" align="right">
-				{{>starsRating id=_id class="js-rate my-star" size=20 mutable=currentUser}}{{rValue}}
+				{{>starsRating id=_id class="js-rate my-star" size=20 mutable=true}}{{rValue}}
 				<span class="warning">
 					<span class="one-user-one-vote">{{i18n "You can give only one vote"}}</span>
 					<span class="do-not-vote-yourself">{{i18n "Do not vote yourself!"}}</span>
