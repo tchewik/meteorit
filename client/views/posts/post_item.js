@@ -42,12 +42,14 @@ Template.postItem.helpers({
 
 Template.postItem.events({
 	'click #js-del-btn':function(event){
+		event.preventDefault();
 		var postId = this._id;
 		$("#"+postId).hide('slow', function(){
 			Meteor.call('postRemove', postId);
 		})		
 	},
 	'click .js-rate':function(event){
+		event.preventDefault();
 		var postId = this.id;
 		var user = Meteor.user();
 		if (!user){
