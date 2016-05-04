@@ -18,8 +18,5 @@ Template.postItem.helpers({
 	},
 	ownPost: function(){
 		return this.author == Meteor.user().username;
-	},
-	commentsCount: function() {
-		return Comments.find({postId: this._id}).count();
 	}
 });
