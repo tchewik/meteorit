@@ -2,7 +2,7 @@
 	<div class="post">
 		<h2>{{title}}</h2>
 		<div class="text-field">{{text}}</div>
-		<span>{{>starsRating id=_id class="js-rate my-star" size=20 }}</span>
+		{{> rating}}
 	</div>
 	<ul class="comments">
 		{{#each comments}}

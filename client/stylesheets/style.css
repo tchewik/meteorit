@@ -16,14 +16,16 @@ body {
   color: #666666; }
 
 .navbar {
-  margin-bottom: 10px; }
-  /* line 32, ../sass/style.scss */
-  .navbar .navbar-inner {
-    -webkit-border-radius: 0px 0px 3px 3px;
-    -moz-border-radius: 0px 0px 3px 3px;
-    -ms-border-radius: 0px 0px 3px 3px;
-    -o-border-radius: 0px 0px 3px 3px;
-    border-radius: 0px 0px 3px 3px; }
+  margin-bottom: 10px; 
+  height: 1.8%;
+}
+
+.navbar .navbar-inner {
+  webkit-border-radius: 0px 0px 3px 3px;
+  -moz-border-radius: 0px 0px 3px 3px;
+  -ms-border-radius: 0px 0px 3px 3px;
+  -o-border-radius: 0px 0px 3px 3px;
+  border-radius: 0px 0px 3px 3px; }
 
 #spinner {
   height: 300px; }
@@ -77,17 +79,8 @@ body {
 
 .comments {
   list-style-type: none;
-  margin: 0; }
-  .comments li h4 {
-    font-size: 16px;
-    margin: 0; }
-    .comments li h4 .date {
-      font-size: 12px;
-      font-weight: normal; }
-    .comments li h4 a {
-      font-size: 12px; }
-  .comments li p:last-child {
-    margin-bottom: 0; }
+  margin: 0; 
+}
 
 .dropdown-menu span {
   display: block;
@@ -209,24 +202,30 @@ body {
 
 .rating-field {
   display: block;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  color: #bbb;
 }
 
 .buttons-field {
   display: inline;
 }
 
-.post-author-name {
-  font-size: 14px;
-  display: inline-block;
-  color: #bbb;
-  text-transform: uppercase; 
-}
+.post-author-name,
 .post-submitted-time {
-  font-size: 14px;
+  font-size: 1.4em;
   display: inline-block;
   color: #bbb;
   text-transform: uppercase; 
 }
+.comment-author-name,
+.comment-submitted-time {
+  font-size: 1.2em;
+  display: inline-block;
+  color: #bbb;
+  text-transform: uppercase;
+}
+
 .btn-primary{
   color: #fff;
   background-color: #497B70;
@@ -286,3 +285,4 @@ textarea .focus {
   background-color: #C3A2A7;
   border: 1px solid #C3979D;
 }
+

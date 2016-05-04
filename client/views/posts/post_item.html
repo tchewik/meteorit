@@ -7,9 +7,7 @@
 			</p>
 			<h3>{{title}}</h3>
 			<div class="text-field">{{text}}</div>
-			<div class="rating-field" align="right">
-				{{>starsRating id=_id class="js-rate my-star" size=20 mutable=acceptMutable}}{{rValue}}
-			</div>
+			{{> rating}}
 		
 		{{#if currentUser}}
 			<div class="buttons-field" align="right"> 
