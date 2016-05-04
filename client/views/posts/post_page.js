@@ -1,5 +1,5 @@
-Template.postPage.events({
-	'click h2': function(){
-		console.log("HEY");
+Template.postPage.helpers({
+	comments: function() {
+		return Comments.find({postId: this._id});
 	}
 })
