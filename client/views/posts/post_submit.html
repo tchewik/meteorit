@@ -9,7 +9,7 @@
     <div class="form-group">
       <label class="control-label" for="text">{{i18n "Text"}}</label>
       <div class="controls">
-          <input name="text" id="text" type="text" value="" placeholder={{i18n "Your text"}} class="form-control"/>
+          <textarea name="text" form="main-form" type="text" autofocus="true" rows="12" style="resize:none" value="{{text}}" placeholder={{i18n "Your text"}} class="form-control form-text"></textarea>
       </div>
     </div>
     <input type="submit" value={{i18n "Submit"}} class="btn btn-primary"/>
