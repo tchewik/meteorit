@@ -1,8 +1,11 @@
 <template name="postPage">
-	<div class="post">
-		<h2>{{title}}</h2>
-		<div class="text-field">{{text}}</div>
-		{{> rating}}
+	<div id="{{_id}}" class="post">
+		<div class="container-fluid post-content">
+			<p><div class="post-author-name">{{author}}</div><div class="post-submitted-time">{{submittedText}}</div></p>
+			<h3>{{title}}</h3>
+			<div class="text-field">{{text}}</div>
+			{{> rating}}
+		</div>
 	</div>
 	<ul class="comments">
 		{{#each comments}}
