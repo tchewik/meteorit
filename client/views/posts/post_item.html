@@ -8,11 +8,6 @@
 			<h3>{{title}}</h3>
 			<div class="text-field">{{text}}</div>
 			<div class="rating-field" align="right">
-				<span class="warning">
-					<span class="one-user-one-vote">{{i18n "You can give only one vote"}}</span>
-					<span class="do-not-vote-yourself">{{i18n "Do not vote yourself!"}}</span>
-					<span class="only-for-users">{{i18n "Please, log in"}}</span>
-				</span>
 				{{>starsRating id=_id class="js-rate my-star" size=20 mutable=acceptMutable}}{{rValue}}
 			</div>
 		

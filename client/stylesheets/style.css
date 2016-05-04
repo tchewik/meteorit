@@ -210,14 +210,7 @@ body {
 .rating-field {
   display: block;
 }
-.rating-field .warning {
-  display: inline-block;
-  padding-left: 2em;
-  color: #752330;
-}
-.rating-field .warning span {
-  display: none;
-}
+
 .buttons-field {
   display: inline;
 }
@@ -275,20 +268,21 @@ body {
   border: 1px solid #5C5585;
 }
 
-input[type=text], textarea {
+input[type=text], 
+textarea {
   background-color: #fff;
 }
-input[type=text]:focus, textarea:focus {
+input[type=text]:focus, 
+textarea:focus,
+textarea .focus {
   box-shadow: 0 0 5px #5C5585;
   border: 1px solid #5C5585;
 }
 
-.post-submit .warning {
-  height: 2em;
-  display: block;
-  color: #752330;
-}
-
-.post-submit .warning .do-not-text-it-again {
-  opacity: 0.001;
+.alert-danger,
+.alert-error,
+.alert-close {
+  color: #322527;
+  background-color: #C3A2A7;
+  border: 1px solid #C3979D;
 }

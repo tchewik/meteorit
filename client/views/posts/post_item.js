@@ -50,11 +50,11 @@ Template.postItem.events({
 	},
 	'click .js-rate':function(event){
 		event.preventDefault();
+		console.log(event);
 		var postId = this.id;
 		var user = Meteor.user();
 		if (!user){
-			$("#"+postId + " .rating-field .warning .only-for-users").fadeIn(1000);
-   			$("#"+postId + " .rating-field .warning .only-for-users").fadeOut(1000);
+			throwError("Please, log in");
    			return;
 		}
 
@@ -65,14 +65,12 @@ Template.postItem.events({
 		    	alreadyVoted = true;
    		});
    		if (alreadyVoted){
-   			$("#"+postId + " .rating-field .warning .one-user-one-vote").fadeIn(1000);
-   			$("#"+postId + " .rating-field .warning .one-user-one-vote").fadeOut(1000);
+   			throwError("You can give only one vote");
    			return;
    		}
 
    		if (user.username == Posts.findOne({"_id": postId}).author){
-  			$("#"+postId + " .rating-field .warning .do-not-vote-yourself").fadeIn(1000);
-   			$("#"+postId + " .rating-field .warning .do-not-vote-yourself").fadeOut(1000);
+   			throwError("Do not vote yourself!");
       		return;
   		}
 
@@ -82,6 +80,6 @@ Template.postItem.events({
 			return;
 		}
 
-		console.log("rating:::что-то пошло не так");
+		
 	}
 });
