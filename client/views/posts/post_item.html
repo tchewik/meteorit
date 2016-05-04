@@ -12,7 +12,7 @@
 		{{#if currentUser}}
 			<div class="buttons-field" align="right"> 
 				{{#if ownPost}}<a href="{{pathFor 'postEdit'}}" class="discuss pull-right btn btn-warning">{{i18n "Edit"}}</a>{{/if}}
-				<a href="{{pathFor 'postPage'}}" class="discuss pull-right btn btn-primary">{{i18n "Discuss"}}</a>
+				<a href="{{pathFor 'postPage'}}" class="discuss pull-right btn btn-primary">{{i18n "comments"}}: {{commentsCount}}</a>
 			</div>
 		{{/if}}
 		</div>
