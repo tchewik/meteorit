@@ -283,3 +283,11 @@ textarea .focus {
   background-color: #C3A2A7;
   border: 1px solid #C3979D;
 }
+
+.post-page-log-in-warning{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.4em;
+  font-style: italic;
+  color: #322527;
+}
