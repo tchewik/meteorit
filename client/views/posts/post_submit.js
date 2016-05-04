@@ -10,13 +10,12 @@ Template.postSubmit.events({
 
     Meteor.call('postInsert', postAttributes, function(error, result) {
       // отобразить ошибку пользователю и прерваться
+      console.log(error);
       if (error)
-      	return alert(error.reason);
+        return throwError(error.reason);
 
       if (result.postExists){
-      	$(".warning .do-not-text-it-again").fadeTo(1000, 1);
-        $(".warning .do-not-text-it-again").fadeTo(1000, 0);
-        return;
+      	throwError('This text has already been posted');
       }
  
       Router.go('postsList');
