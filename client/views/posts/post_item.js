@@ -50,7 +50,6 @@ Template.postItem.events({
 	},
 	'click .js-rate':function(event){
 		event.preventDefault();
-		console.log(event);
 		var postId = this.id;
 		var user = Meteor.user();
 		if (!user){
@@ -79,7 +78,5 @@ Template.postItem.events({
 			Meteor.call('postRating', postId, rating);
 			return;
 		}
-
-		
 	}
 });
