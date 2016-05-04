@@ -275,8 +275,8 @@ textarea {
 input[type=text]:focus, 
 textarea:focus,
 textarea .focus {
-  box-shadow: 0 0 5px #5C5585;
-  border: 1px solid #5C5585;
+  box-shadow: 0 0 5px #5C5585 !important;
+  border: 1px solid #5C5585 !important;
 }
 
 .alert-danger,
