@@ -99,4 +99,20 @@ if (Posts.find().count() === 0) {
 		  				 },
 		  	commentsCount: 0
 		});
+
+		for (var i = 0; i < 12; i++) {
+			Posts.insert({
+				title: 'Тестовый пост #' + i,
+				userId: burmistrov._id,
+				author: burmistrov.profile.name,
+				text: Fake.paragraph([12]),
+				submitted: now,
+				'rating': {
+					'summvalue': 0,
+					'voted': [],
+					'rValue': 0
+				},
+				commentsCount: 0
+			});
 	}
+}

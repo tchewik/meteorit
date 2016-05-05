@@ -26,7 +26,6 @@ accounts-password
 ian:accounts-ui-bootstrap-3
 check
 barbatus:stars-rating
-fortawesome:fontawesome
-chuangbo:cookie
 anti:i18n
 mrt:jquery-ui
+anti:fake
