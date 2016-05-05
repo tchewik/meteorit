@@ -48,4 +48,4 @@ Template.rating.events({
 			return;
 		}
 	}
-})
+});
