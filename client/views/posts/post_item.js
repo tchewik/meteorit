@@ -17,6 +17,7 @@ Template.postItem.helpers({
 		return new Date(this.submitted).toLocaleString();
 	},
 	ownPost: function(){
-		return this.author == Meteor.user().username;
+		var username = Meteor.user().username || Meteor.user().profile.name;
+		return this.author === username;
 	}
 });

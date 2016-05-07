@@ -4,7 +4,8 @@ Template.rating.helpers({
 	},
 	acceptMutable: function(){
 		if (Meteor.user()) {
-			var iAmAuthor = this.author == Meteor.user().username;
+			var username = Meteor.user().username || Meteor.user().profile.name;
+			var iAmAuthor = this.author == username;
 			var iVoted = false;
 			var arrayOfVoted = Posts.findOne({"_id": this._id}).rating.voted;
 			arrayOfVoted.forEach(function(item, i, arr) {
@@ -21,6 +22,7 @@ Template.rating.events({
 		event.preventDefault();
 		var postId = this.id;
 		var user = Meteor.user();
+		var username = user.username || user.profile.name;
 		if (!user){
 			throwError("Please, log in");
    			return;
@@ -37,7 +39,7 @@ Template.rating.events({
    			return;
    		}
 
-   		if (user.username == Posts.findOne({"_id": postId}).author){
+   		if (username == Posts.findOne({"_id": postId}).author){
    			throwError("Do not vote yourself!");
       		return;
   		}
