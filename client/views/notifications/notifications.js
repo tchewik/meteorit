@@ -18,3 +18,7 @@ Template.notificationItem.events({
 		Notifications.update(this._id, {$set: {read: true}});
 	}
 });
+
+Meteor.setInterval(function() {
+	Meteor.call('notificationsClear');
+}, 15 * 1000);
