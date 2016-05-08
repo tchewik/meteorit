@@ -9,7 +9,6 @@ Template.comment.helpers({
 
 Template.comment.events({
 	'click .close':function() {
-		console.log(this);
 		Meteor.call('remove', this._id);
 	}
 });
