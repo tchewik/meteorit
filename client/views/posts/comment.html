@@ -1,5 +1,6 @@
 <Template name="comment">
 	<li>
+	{{#if iAmAuthor}}<a href="#" class="close">&times;</a>{{/if}}
 		<p>
 			<div class="comment-author-name">{{author}}</div>
 			<div class="comment-submitted-time">{{submittedText}}</div>

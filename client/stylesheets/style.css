@@ -291,5 +291,17 @@ textarea .focus {
   padding-bottom: 1em;
   font-size: 1.4em;
   font-style: italic;
-  color: #322527;
+  color: #bbb;
+}
+
+.btn-Facebook {
+  color: #fff;
+  background-color: #3b5998;
+}
+
+.btn-Facebook:hover {
+  color: #fff;
+  background-color: #2E4C8B;
+  box-shadow: 0 0 5px #5C5585 !important;
+  border: 1px solid #5C5585 !important;
 }
