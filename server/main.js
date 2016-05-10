@@ -9,6 +9,6 @@ Accounts.onCreateUser(function(options, user) {
 		user.profile = {
 			name: user.username
 		}
+		return user;
 	}
-	return user;
 });
