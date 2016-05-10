@@ -5,8 +5,9 @@ Meteor.startup(() => {
 });
 
 Accounts.onCreateUser(function(options, user) {
-	user.profile = {
-		name: options.username
-	}
+	if (options.username)
+		user.profile = {
+			name: options.username
+		}
 	return user;
 })
