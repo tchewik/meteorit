@@ -1,5 +1,5 @@
 Template.postPage.helpers({
 	comments: function() {
-		return Comments.find({postId: this._id});
+		return Comments.find({postId: this._id}, {sort:	{'submitted': 1}});
 	},
 })
