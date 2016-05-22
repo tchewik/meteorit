@@ -310,3 +310,18 @@ textarea .focus {
   background-color: #fff;
   box-shadow: 0 0 5px #5C5585;
 }
+
+.go-back{
+  left: 1em;
+  padding-top: 1.2em;
+  position: fixed;
+  z-index: 42;
+}
+
+a,
+a:active,
+a:hover:
+a:visited,
+a:link {
+  text-decoration: none;
+}
