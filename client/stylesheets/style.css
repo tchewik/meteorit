@@ -177,7 +177,9 @@ a:hover {
 .lang-warning {
   font-size: 12px;
   line-height:20px; 
-  position: relative;
+  width: 100%;
+  position: fixed;
+  z-index: 42;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #FFCA73;
@@ -313,7 +315,7 @@ textarea .focus {
 
 .go-back{
   left: 1em;
-  padding-top: 1.2em;
+  padding-top: 3em;
   position: fixed;
   z-index: 42;
   cursor: pointer;
