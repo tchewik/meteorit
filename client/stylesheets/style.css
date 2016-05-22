@@ -281,9 +281,9 @@ textarea .focus {
 .alert-danger,
 .alert-error,
 .alert-close {
-  color: #322527;
-  background-color: #C3A2A7;
-  border: 1px solid #C3979D;
+  color: rgba(50, 37, 39, 1);
+  background-color: rgba(195, 162, 167, 0.4);
+  border: 1px solid rgba(195, 151, 157, 0.4);
 }
 
 .post-page-log-in-warning{
@@ -316,6 +316,7 @@ textarea .focus {
   padding-top: 1.2em;
   position: fixed;
   z-index: 42;
+  cursor: pointer;
 }
 
 a,
