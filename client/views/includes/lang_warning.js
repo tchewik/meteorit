@@ -39,11 +39,6 @@ Template.langWarningTemplate.onCreated(function(){
 	$(window).on('scroll', function(e) {
 		var y = $("body").scrollTop();
 		var opacity = 1 - 0.0008*y
-		if (y > 1000) {
-			$(".lang-warning").css("display","none");
-		} else {
-			$(".lang-warning").css("display","block"); 
-			$(".lang-warning").css("opacity",opacity); 
-		}
+		$(".lang-warning").css("opacity",opacity); 
 	})
 });
