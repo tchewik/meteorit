@@ -38,7 +38,8 @@ Template.langWarningTemplate.events({
 Template.langWarningTemplate.onCreated(function(){
 	$(window).on('scroll', function(e) {
 		var y = $("body").scrollTop();
-		var opacity = 1 - 0.0008*y
+		var opacity = 1 - 0.0008*y;
 		$(".lang-warning").css("opacity",opacity); 
+		$(".lang-warning").css("z-index",Math.floor(opacity*100));
 	})
 });
