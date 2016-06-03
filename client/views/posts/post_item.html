@@ -4,11 +4,11 @@
 			<p>
 				{{#if containsAuthor}}<div class="post-author-name">{{author}}</div>{{/if}} 
 				{{#if containsTime}}<div class="post-submitted-time">{{submittedText}}</div>{{/if}}
-				<div class="post-share">{{>shareit}}</div>
 			</p>
 			<h3>{{title}}</h3>
 			<div class="text-field">{{text}}</div>
 			{{> rating}}
+			{{> shareit}}
 		
 		{{#if currentUser}}
 			<div class="buttons-field" align="right"> 
