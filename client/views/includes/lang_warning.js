@@ -32,6 +32,7 @@ Template.langWarningTemplate.events({
 	},
 	'click .close': function(event){
 		$(".lang-warning").hide("normal");
+		$(".lang-warning-place").css("padding-top", "0em");
 	},
 });
 
