@@ -219,12 +219,14 @@ a:hover {
 }
 
 .post-author-name,
-.post-submitted-time {
+.post-submitted-time,
+.post-share {
   font-size: 1.4em;
   display: inline-block;
   color: #bbb;
   text-transform: uppercase; 
 }
+
 .comment-author-name,
 .comment-submitted-time {
   font-size: 1.2em;
