@@ -19,5 +19,11 @@ Template.postItem.helpers({
 	ownPost: function(){
 		var username = Meteor.user().username || Meteor.user().profile.name;
 		return this.author === username;
+	},
+	shareData: function() {
+		return {
+			title: this.title + " @"+this.author,
+			url: "https://tcheblog.herokuapp.com/"+this._id,
+		}
 	}
 });
