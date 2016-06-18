@@ -1,2 +1,1 @@
-# tcheblog
 # Meteor.js
